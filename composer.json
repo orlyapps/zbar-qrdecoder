@@ -28,6 +28,6 @@
                 "RobbieP\\ZbarQrdecoder\\ZbarQrdecoderServiceProvider"
             ]
         }
-    }
+    },
     "minimum-stability": "stable"
 }
