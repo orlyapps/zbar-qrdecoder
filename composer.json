@@ -22,5 +22,12 @@
             "RobbieP\\ZbarQrdecoder\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RobbieP\\ZbarQrdecoder\\ZbarQrdecoderServiceProvider"
+            ]
+        }
+    }
     "minimum-stability": "stable"
 }
