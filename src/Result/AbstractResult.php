@@ -42,7 +42,12 @@ abstract class AbstractResult
     {
         return $this->format;
     }
-
+    
+    public function getCode()
+    {
+        return $this->code;
+    }
+    
     /**
      * Will determine what type of barcode and set the correct text response
      *
