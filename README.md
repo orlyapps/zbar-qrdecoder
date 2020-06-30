@@ -21,7 +21,7 @@ Add this to your `composer.json` dependencies:
 
 ```js
 "require": {
-   "robbiep/zbar-qrdecoder": "^2.0"
+   "orlyapps/zbar-qrdecoder": "^2.0"
 }
 ```
 
@@ -41,8 +41,8 @@ $ZbarDecoder->setPath('/usr/local/bin');
 $result = $ZbarDecoder->make('/a/path/to/image_with_barcode.jpg');
 
 echo $result; // Outputs the decoded text
-echo $result->format; // Outputs the barcode's format
-echo $result->code; // 200 if it decoded a barcode OR 400 if it couldn't find a barcode.
+echo $result->getFormat(); // Outputs the barcode's format
+echo $result->getText(); // 200 if it decoded a barcode OR 400 if it couldn't find a barcode.
 ```
 
 ## If you're using it in Laravel...

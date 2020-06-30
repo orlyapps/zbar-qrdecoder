@@ -36,7 +36,7 @@ class ZbarDecoder
         if (isset($config['path'])) {
             $this->setPath($config['path']);
         }
-        $this->process = null === $process ? new Process($this->getPath()) : $process;
+        $this->process = $process;
     }
 
     /**
@@ -110,13 +110,14 @@ class ZbarDecoder
     private function buildProcess()
     {
         $path = $this->getPath();
-        $this->process->setCommandLine([
+        $this->process = new Process([
             $path . DIRECTORY_SEPARATOR . static::EXECUTABLE,
             '-D',
             '--xml',
             '-q',
             $this->getFilePath()
-        ])->enableOutput();
+        ]);
+        $this->process->enableOutput();
 
     }
 
